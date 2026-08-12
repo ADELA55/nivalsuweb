@@ -1,23 +1,27 @@
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-10">
-      <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-3 gap-8">
+    <footer className="bg-gray-900 text-white">
+      <div className="max-w-6xl mx-auto px-6 py-12">
+        <div className="grid md:grid-cols-3 gap-10">
           {/* Empresa */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">
-              Estructuras Metálicas LUCHO
-            </h3>
+            <h2 className="text-2xl font-bold mb-4">
+              NIVALSU
+            </h2>
 
             <p className="text-gray-400 leading-relaxed">
-              Soluciones metálicas con calidad, seguridad y resistencia para
-              proyectos industriales, comerciales y residenciales.
+              NIVALSU Proyectos y Servicios brinda soluciones en estructuras
+              metálicas, fabricación, instalación, mantenimiento y servicios
+              generales para proyectos industriales, comerciales, educativos
+              y de infraestructura.
             </p>
           </div>
 
           {/* Enlaces */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Enlaces</h3>
+            <h3 className="text-xl font-bold mb-4">
+              Enlaces
+            </h3>
 
             <ul className="space-y-2 text-gray-400">
               <li>
@@ -60,7 +64,9 @@ export default function Footer() {
 
           {/* Redes Sociales */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Síguenos</h3>
+            <h3 className="text-xl font-bold mb-4">
+              Síguenos
+            </h3>
 
             <p className="text-gray-400 mb-4">
               Conoce nuestros trabajos y contáctanos.
@@ -90,8 +96,8 @@ export default function Footer() {
 
         <div className="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
           <p>
-            © {new Date().getFullYear()} Estructuras Metálicas LUCHO. Todos los
-            derechos reservados.
+            © {new Date().getFullYear()} NIVALSU Proyectos y Servicios. Todos
+            los derechos reservados.
           </p>
         </div>
       </div>
