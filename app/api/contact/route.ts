@@ -42,16 +42,18 @@ export async function POST(request: Request) {
     });
 
     if (error) {
-      console.error("RESEND API ERROR:", error);
+  console.error("RESEND API ERROR:", error);
 
-      return NextResponse.json(
-        {
-          error: "Error de Resend",
-          detalle: error,
-        },
-        { status: 500 }
-      );
-    }
+  return NextResponse.json(
+    {
+      error: "Error de Resend",
+      detalle: error.message,
+      nombre: error.name,
+      status: error.statusCode,
+    },
+    { status: 500 }
+  );
+}
 
     return NextResponse.json({
       success: true,
