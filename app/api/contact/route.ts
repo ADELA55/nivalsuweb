@@ -13,7 +13,14 @@ export async function POST(request: Request) {
         { status: 400 }
       );
     }
+    const apiKey = process.env.RESEND_API_KEY;
 
+console.log("=== RESEND DEBUG ===");
+console.log("Existe API Key:", !!apiKey);
+console.log("Longitud:", apiKey?.length);
+console.log("Empieza con re_:", apiKey?.startsWith("re_"));
+console.log("====================");
+    
     const { data, error } = await resend.emails.send({
       from: "NIVALSU Web <onboarding@resend.dev>",
       to: ["nivalsu.proyectos@gmail.com"],
