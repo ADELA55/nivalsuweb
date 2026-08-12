@@ -74,7 +74,8 @@ export default function Footer() {
 
             <div className="flex flex-wrap gap-3">
               <a
-                href="https://www.facebook.com/share/1XqLEGFR8Q/"
+                href=""
+                // href="https://www.facebook.com/share/1XqLEGFR8Q/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition"
