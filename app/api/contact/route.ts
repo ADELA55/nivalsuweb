@@ -2,7 +2,16 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-
+console.log("=== RESEND DEBUG ===");
+console.log("API KEY EXISTS:", !!process.env.RESEND_API_KEY);
+console.log(
+  "API KEY LENGTH:",
+  process.env.RESEND_API_KEY?.length
+);
+console.log(
+  "API KEY PREFIX:",
+  process.env.RESEND_API_KEY?.substring(0, 3)
+);
 export async function POST(request: Request) {
   try {
     const { nombre, email, telefono, proyecto } = await request.json();
