@@ -23,17 +23,30 @@ export default function Contact() {
   };
 
   const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    setEnviando(true);
-    setMensaje("");
+  setEnviando(true);
+  setMensaje("");
 
-    // Por ahora solamente simulamos el envío.
-    // En el siguiente paso lo conectaremos con Google Forms.
-    await new Promise((resolve) => setTimeout(resolve, 800));
+  try {
+    const formData = new FormData();
+
+    formData.append("entry.57332869", form.nombre);
+    formData.append("entry.1422411822", form.email);
+    formData.append("entry.896803769", form.telefono);
+    formData.append("entry.1532967118", form.proyecto);
+
+    await fetch(
+      "https://docs.google.com/forms/d/e/1FAIpQLSeVZbwKMxRpqF-bL8qWVqdjxxvehKQMqoD0Qs-YvL-38af5Bg/formResponse",
+      {
+        method: "POST",
+        body: formData,
+        mode: "no-cors",
+      }
+    );
 
     setMensaje(
-      "¡Solicitud recibida! Gracias por contactar con NIVALSU."
+      "¡Solicitud enviada correctamente! Nos pondremos en contacto contigo."
     );
 
     setForm({
@@ -42,9 +55,16 @@ export default function Contact() {
       telefono: "",
       proyecto: "",
     });
+  } catch (error) {
+    console.error("Error al enviar formulario:", error);
 
+    setMensaje(
+      "No se pudo enviar la solicitud. Por favor, inténtalo nuevamente o contáctanos por WhatsApp."
+    );
+  } finally {
     setEnviando(false);
-  };
+  }
+};
 
   return (
     <section id="contacto" className="py-20 bg-white">
