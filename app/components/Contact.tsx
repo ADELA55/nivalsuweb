@@ -48,14 +48,14 @@ export default function Contact() {
             <iframe
               src="https://docs.google.com/forms/d/e/1FAIpQLSeVZbwKMxRpqF-bL8qWVqdjxxvehKQMqoD0Qs-YvL-38af5Bg/viewform?embedded=true"
               width="100%"
-              height="1000"
+              height="949"
               frameBorder="0"
               marginHeight={0}
               marginWidth={0}
               title="Solicitud de cotización NIVALSU"
               className="w-full"
             >
-              Cargando formulario…
+              Cargando…
             </iframe>
           </div>
         </div>
