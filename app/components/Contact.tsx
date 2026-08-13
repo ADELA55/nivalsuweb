@@ -44,20 +44,20 @@ export default function Contact() {
           </div>
 
           {/* Formulario de Google Forms */}
-          <div className="bg-gray-50 rounded-2xl shadow overflow-hidden">
-            <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSeVZbwKMxRpqF-bL8qWVqdjxxvehKQMqoD0Qs-YvL-38af5Bg/viewform?embedded=true"
-              width="100%"
-              height="949"
-              frameBorder="0"
-              marginHeight={0}
-              marginWidth={0}
-              title="Solicitud de cotización NIVALSU"
-              className="w-full"
-            >
-              Cargando…
-            </iframe>
-          </div>
+<div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+  <iframe
+    src="https://docs.google.com/forms/d/e/1FAIpQLSeVZbwKMxRpqF-bL8qWVqdjxxvehKQMqoD0Qs-YvL-38af5Bg/viewform?embedded=true"
+    width="100%"
+    height="1000"
+    frameBorder="0"
+    marginHeight={0}
+    marginWidth={0}
+    title="Solicitud de cotización NIVALSU"
+    className="w-full"
+  >
+    Cargando formulario…
+  </iframe>
+</div>
         </div>
       </div>
     </section>
